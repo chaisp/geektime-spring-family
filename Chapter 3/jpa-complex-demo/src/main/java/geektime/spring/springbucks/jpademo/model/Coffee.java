@@ -25,5 +25,4 @@ public class Coffee extends BaseEntity implements Serializable {
             parameters = {@org.hibernate.annotations.Parameter(name = "currencyCode", value = "CNY")})
     private Money price;
     private String origin;
-    private Integer promote;
 }

@@ -31,6 +31,7 @@ public class CoffeeOrderService {
     }
 
     public boolean updateState(CoffeeOrder order, OrderState state) {
+        //通过compare保证流程永远是从小到大,不能逆转
         if (state.compareTo(order.getState()) <= 0) {
             log.warn("Wrong State order: {}, {}", state, order.getState());
             return false;
